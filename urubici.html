@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urubici - Bel Fagundes Excursões</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Incluindo o CSS -->
+    <style>
+        /* Estilos para a estrutura geral */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        /* Estilos para o carrossel */
+        .carousel {
+            flex: 1;
+            position: top;
+            max-width: 500px;
+            overflow: hidden;
+            margin-top: 25px;
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-images img {
+            border-radius: 15px; /* Bordas arredondadas */
+            width: 100%;
+            min-width: 100%;
+        }
+
+        /* Botões do carrossel */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Estilos para o quadro de informações */
+        .info-viagem, .pontos-turisticos, .informacoes-adicionais {
+            margin-bottom: 15px;
+        }
+
+        .info-viagem h3, .pontos-turisticos h3, .informacoes-adicionais h3 {
+            margin-bottom: 10px;
+            color: #0277bd;
+        }
+
+        .info-section {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+        }
+
+        /* Estilo do botão flutuante do WhatsApp */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .reserve-button {
+            margin-top: 20px;
+        }
+
+        /* Estilos para o footer */
+        footer {
+            background-color: #0277bd;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<!-- Cabeçalho da página -->
+<header>
+    <img src="https://imgur.com/WRL3tKR.jpg" alt="Logo Bel Fagundes Excursões" style="max-width: 190px;">
+    <div class="menu-toggle" id="mobile-menu">
+        &#9776; <!-- Ícone de hambúrguer -->
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="excursões.html">Excursões</a>
+        <a href="empresa.html">Empresa</a>
+        <a href="contato.html">Contato</a>    
+    </nav>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/bel.fagundes.102" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com/bel.fagu" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+    </div>
+</header>
+
+<script>
+    const menu = document.getElementById('mobile-menu');
+    const nav = document.querySelector('nav');
+
+    menu.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
+
+<div style="text-align: center;margin-top: 50px;">
+    <p><span style="color: #0277bd; font-weight: bold;font-size: 2.5em;">Partiu Urubici-SC</span></p>
+</div>
+
+<div class="container">
+    <!-- Carrossel de imagens -->
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="https://imgur.com/IVJi2Rj.jpg" alt="Imagem 2">
+            <img src="https://imgur.com/kk7UoVM.jpg" alt="Imagem 3">
+            <img src="https://imgur.com/9sBmmF7.jpg" alt="Imagem 1">
+        </div>
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+<div class="info-section">
+    <section class="info-viagem">
+        <h3>Viagem para Urubici + Serra do Rio do Rastro</h3>
+        <p><strong>Data:</strong> Saída dia 12/12 às 07:00 - Retorno dia 16/12 às 14:00</p>
+        <p><strong>Vagas limitadas:</strong> Apenas 15 vagas disponíveis! Garanta a sua!</p>
+        <p><strong>Valor:</strong></p>
+        <ul>
+            <li>Adulto: R$ 1.450,00</li>
+            <li>Crianças até 5 anos: Não pagam (indo no colo)</li>
+            <li>Crianças de 6 a 11 anos: R$ 1.350,00</li>
+        </ul>
+        <p><strong>Pagamento:</strong> PIX ou parcelado no cartão sem juros (apenas taxas do parcelamento).</p>
+    </section>
+
+    <section class="pontos-turisticos">
+        <h3>Pacote Incluso</h3>
+        <ul>
+            <li>Transporte ida e volta em van executiva (passeios e acesso à Serra)</li>
+            <li>Guia especializado</li>
+            <li>Transporte para os passeios</li>
+            <li>4 pernoites com 4 cafés da manhã (pousada)</li>
+            <li>Kit lanche, refrigerante e água na ida</li>
+            <li>Churrasco na primeira noite</li>
+        </ul>
+    </section>
+
+    <section class="pontos-turisticos">
+        <h3>Locais Visitados</h3>
+        <ul>
+            <li>Gruta Nossa Senhora de Lourdes</li>
+            <li>Cachoeira do Papuã e Cascata do Avencal</li>
+            <li>Morro do Campestre</li>
+            <li>Serra do Corvo (local para fotos)</li>
+            <li>Mirante de Urubici</li>
+            <li>Serra do Rio do Rastro com paradas para fotos</li>
+            <li>Morro da Igreja</li>
+            <li>Cachodos Bugres</li>
+            <li>Parque Alto dos Corvo Branco</li>
+            <li>Cachoeira Véu da Noiva</li>
+            <li>Trilha até a Cascata do Avencal</li>
+        </ul>
+    </section>
+
+    <section class="informacoes-adicionais">
+        <h3>Informações Adicionais</h3>
+        <p><strong>Não incluso:</strong> Alimentação e ingressos para os passeios (alguns são gratuitos).</p>
+        <p><strong>Reservas:</strong> Consulte quartos ajustados conforme necessidade.</p>
+    </section>
+</div>
+</div>
+<!-- Botão flutuante do WhatsApp -->
+<a href="https://wa.me/554198082708" class="whatsapp-button" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<!-- Botão "Reserve Já" -->
+<div style="text-align: center; margin: 20px 0;">
+    <a href="https://wa.me/554198082708" class="reserve-button" target="_blank" style="text-decoration: none;">
+        <button style="padding: 15px 30px; background-color: #0277bd; color: white; border: none; border-radius: 5px; font-size: 20px; cursor: pointer;">
+            Reserve Já
+        </button>
+    </a>
+</div>
+
+<!-- Rodapé com contatos e redes sociais -->
+<footer>
+    <div class="footer-content">
+        <h3>Bel Fagundes Excursões</h3>
+        <p>Explore novos destinos com conforto e segurança.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/bel.fagundes.102" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://instagram.com/bel.fagu" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+
+    <div class="copyright">    
+        <p>&copy; 2024 Bel Fagundes Excursões. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script>
+let currentIndex = 0;
+
+function changeImage(direction) {
+    const images = document.querySelectorAll('.carousel-images img');
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    } else if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+
+    const offset = -currentIndex * 100;
+    document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+}
+</script>
+</body>
+</html>
