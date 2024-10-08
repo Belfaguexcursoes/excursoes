@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Bel Fagundes Excursões</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Incluindo o CSS -->
+</head>
+<body>
+<!-- Cabeçalho da página -->
+<header>
+    <img src="https://imgur.com/WRL3tKR.jpg" alt="Logo Bel Fagundes Excursões" style="max-width: 200px;">
+    <div class="menu-toggle" id="mobile-menu">
+        &#9776; <!-- Ícone de hambúrguer -->
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="excursões.html">Excursões</a>
+        <a href="empresa.html">Empresa</a>
+        <a href="contato.html">Contato</a>    
+    </nav>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/bel.fagundes.102" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com/bel.fagu" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+    </div>
+</header>
+
+<script>
+    const menu = document.getElementById('mobile-menu');
+    const nav = document.querySelector('nav');
+
+    menu.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
+
+<!-- Seção de conteúdo sobre a empresa -->
+<div class="content">
+    <h3>Sobre Nós</h3>
+    <p>A Bel Fagundes Excursões é uma empresa dedicada a proporcionar experiências inesquecíveis em viagens e excursões. Com mais de 7 anos de experiência no mercado, nossa missão é oferecer conforto, segurança e um atendimento de excelência a todos os nossos clientes.</p>
+
+    <h2>Nossa História</h2>
+    <p>A empresa foi fundada por Isabel Fagundes, que sempre teve paixão por viajar e conhecer novos lugares. Com o tempo, a Bel Fagundes Excursões se tornou referência em turismo na região, atendendo tanto grupos quanto excursões individuais.</p>
+
+    <h2>O Que Fazemos</h2>
+    <p>Oferecemos pacotes de excursões para diversos destinos, com guias experientes que garantem a melhor experiência durante a viagem. Trabalhamos para que cada detalhe seja planejado com carinho, desde a escolha dos destinos até o retorno para casa.</p>
+
+    <h2>Nossa Equipe</h2>
+    <p>Contamos com uma equipe de profissionais apaixonados por turismo. Nossa equipe está sempre pronta para atender suas necessidades e tornar sua viagem a melhor possível.</p>
+</div>
+
+<!-- Botão flutuante do WhatsApp -->
+<a href="https://wa.me/554198082708" class="whatsapp-button" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<!-- Rodapé com contatos e redes sociais -->
+<footer>
+    <div class="footer-content">
+        <h3>Bel Fagundes Excursões</h3>
+        <p>Explore novos destinos com conforto e segurança.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/bel.fagundes.102" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://instagram.com/bel.fagu" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter">
+            </a>
+        </div>
+    </div>
+
+    <div class="copyright">	
+        <p>&copy; 2024 Bel Fagundes Excursões. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>

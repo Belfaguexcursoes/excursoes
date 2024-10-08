@@ -1,0 +1,630 @@
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        header {
+            background-color: #0277bd;
+            color: white;
+            padding: 10px 20px;
+            text-align: left;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            align-items: center;
+            display: flex; 
+            justify-content: space-between; /* Distribui logo à esquerda e nav à direita */
+            align-items: center; /* Centraliza verticalmente */
+        }
+ h1 {
+    margin: 0; /* Remove margens padrão */
+    margin-left: 30px; /* Adiciona espaço à direita, se necessário */
+}
+
+        .social-media {
+            display: flex;
+            justify-content: flex-start; /* Alinha o conteúdo ao canto esquerdo */
+    margin-left: 15px; /* Espaçamento entre os ícones das redes sociais */
+        }
+
+        .social-media a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: opacity 0.3s;
+    flex-direction: column; /* Coloca os ícones de rede social em coluna */
+        }
+
+        .social-media img {
+            width: 5px; /* Tamanho do ícone */
+            vertical-align: left; /* Alinha o ícone com o texto */
+            margin-right: 8px; /* Espaço entre o ícone e o texto */
+        }
+
+        .social-media a:hover {
+            opacity: 0.8; /* Efeito de hover */
+        }
+
+.social-icons {
+    display: flex;
+            gap: 10px;
+    align-items: center; /* Centraliza os ícones na coluna */
+}
+
+.social-icons a {
+    margin: 5px 0; /* Espaçamento entre os ícones */
+    text-decoration: none;
+}
+
+.social-icons a img {
+    width: 35px; /* Tamanho desejado dos ícones */
+    height: auto; /* Mantém a proporção da imagem */
+    transition: transform 0.2s ease-in-out; /* Efeito de transição */
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+}
+.hero {
+    background-image: url('https://imgur.com/0kDvmb0.jpg'); /* Imagem de fundo */
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin: 0;
+    color: white;
+}
+
+.hero-social {
+    position: absolute;
+    top: 20px; /* Alinhado ao topo */
+    left: 20px; /* Alinhado à esquerda */
+    display: flex;
+    flex-direction: column; /* Coloca os ícones de rede social em coluna */
+    gap: 10px; /* Espaço entre os ícones */
+}
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .content h3 {
+            font-size: 32px;
+            color: #01579b; /* Azul mais escuro */
+        }
+
+        .excursion {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+ .excursion-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: left;
+    max-width: 350px; /* Aumenta a largura máxima do cartão */
+ flex: 1 1 calc(100% - 20px); /* Faz os cartões ocuparem toda a largura em telas menores */
+    transition: transform 0.3s;
+}
+        .excursion-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .excursion-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .excursion-card h4 {
+            margin-top: 10px;
+            color: #0277bd; /* Azul mais escuro */
+    font-size: 24px; /* Aumenta o tamanho do título */
+    font-weight: bold; /* Deixa o título em negrito */
+        }
+
+        .excursion-card p {
+            margin: 10px 0;
+        }
+
+        .payment-button {
+            display: inline-block;
+            background-color: #81d4fa; /* Azul claro */
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .payment-button:hover {
+            background-color: #0277bd; /* Azul mais escuro */
+            color: white;
+        }
+
+        /* Estilo para o botão flutuante do WhatsApp */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366; /* Verde do WhatsApp */
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E; /* Tom mais escuro do verde do WhatsApp */
+        }
+
+        .whatsapp-button img {
+            width: 30px; /* Tamanho do ícone do WhatsApp */
+        }
+
+        .custom-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #0277bd; /* Azul mais escuro */
+            color: white;
+            border-radius: 25px; /* Deixa o botão mais arredondado */
+            font-size: 16px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+            transition: background-color 0.3s, transform 0.3s; /* Animação mais suave */
+        }
+
+        .custom-button:hover {
+            background-color: #01579b; /* Azul mais escuro no hover */
+            transform: translateY(-5px); /* Efeito de subir ao passar o mouse */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais profunda ao hover */
+        }
+
+        /* Estilo para a seção de depoimentos */
+        .testimonial {
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        .testimonial-card {
+            background-color: #fff;
+            border: 2px solid #8ecae6; /* Borda azul clara */
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s; /* Efeito de transição */
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.02); /* Aumenta o tamanho ao passar o mouse */
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin: 0;
+        }
+
+        .testimonial-author {
+            text-align: right;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+/* Estilo da seção de perguntas frequentes */
+#faq {
+    padding: 40px;
+    background-color: #208ebd; /* Cor de fundo suave */
+}
+
+#faq h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333; /* Cor do título */
+}
+
+.accordion {
+    max-width: 600px; /* Limitar a largura da seção */
+    margin: 0 auto; /* Centraliza a seção */
+}
+
+.accordion-item {
+    margin-bottom: 10px; /* Espaço entre os itens */
+}
+
+.accordion-button {
+    background-color: #4a95c2; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease; /* Transição suave */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.accordion-button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}
+
+.accordion-content {
+    background-color: white; /* Cor de fundo do conteúdo */
+    max-height: 0; /* Esconde o conteúdo inicialmente */
+    overflow: hidden;
+    transition: max-height 0.2s ease-out; /* Transição suave */
+    padding: 0 15px;
+}
+.accordion-button.active + .accordion-content {
+    max-height: 150px; /* Mostra o conteúdo ao clicar */
+    padding: 15px; /* Adiciona o padding novamente */
+}
+footer {
+    background-color: #007BFF; /* Cor de fundo do rodapé */
+    color: white; /* Cor do texto */
+    text-align: center; /* Alinhamento do texto */
+    padding: 40px 20px; /* Espaçamento interno */
+}
+
+footer h3 {
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-size: 24px; /* Tamanho da fonte do título */
+}
+
+footer p {
+    margin: 5px 0; /* Espaçamento entre parágrafos */
+}
+
+footer .footer-content {
+    margin-bottom: 20px; /* Espaçamento abaixo do conteúdo */
+}
+
+footer .social-links {
+    display: flex; /* Flexbox para os ícones sociais */
+    justify-content: center; /* Centraliza os ícones */
+    margin-top: 10px; /* Espaçamento acima dos ícones */
+}
+
+footer .social-links a {
+    margin: 0 15px; /* Espaçamento entre ícones */
+    transition: transform 0.3s; /* Efeito de transição */
+}
+
+footer .social-links a:hover {
+    transform: scale(1.2); /* Aumenta o tamanho ao passar o mouse */
+}
+
+footer .social-links img {
+    width: 30px; /* Tamanho dos ícones */
+}
+
+footer .footer-links {
+    margin-top: 20px; /* Espaçamento acima dos links do site */
+}
+
+footer .footer-links a {
+    color: white; /* Cor dos links */
+    margin: 0 10px; /* Espaçamento entre os links */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s; /* Efeito de transição */
+}
+
+footer .footer-links a:hover {
+    color: #FFD700; /* Cor ao passar o mouse */
+}
+
+footer .copyright {
+    margin-top: 30px; /* Espaçamento acima do copyright */
+    font-size: 14px; /* Tamanho da fonte do copyright */
+}
+        .menu-toggle {
+            display: none; /* Escondido por padrão em telas grandes */
+            font-size: 30px;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            gap: 40px; /* Aumenta o espaçamento entre os itens do menu */
+            margin-right: auto; /* Centraliza o menu mais para o centro */
+            margin-left: 100px; /* Ajuste o valor conforme necessário */
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 15px 20px;
+            font-size: 21px; /* Aumenta o tamanho da fonte */
+            border-radius: 5px;
+            position: relative; /* Necessário para a animação */
+            transition: all 0.3s ease; /* Transição suave para efeitos */
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: #cf7d1f; /* Cor da animação */
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover::before {
+            visibility: visible;
+            width: 100%; /* O sublinhado animado cresce até cobrir todo o link */
+        }
+
+        nav a:hover {
+            background-color: #01579b; /* Efeito de mudança de cor ao passar o mouse */
+            transform: scale(1.05); /* Efeito de aumento */
+}
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block; /* Mostra o menu hambúrguer em dispositivos móveis */
+            }
+
+            nav {
+                display: none; /* Esconde a navegação por padrão */
+                flex-direction: column; /* Deixa os links em coluna */
+                width: auto;
+                background-color: #0277bd;
+                position: absolute; /* Para sobrepor o menu */
+                top: 70px; /* Logo abaixo do cabeçalho */
+                left: 10%;
+                z-index: 999;
+                padding: 20px 0;
+                transition: max-height 0.5s ease; /* Animação suave */
+                max-height: 0; /* Esconde o menu inicialmente */
+                overflow: hidden; /* Esconde o conteúdo extra ao recolher */
+            }
+
+            nav.active {
+                display: flex; /* Exibe o menu quando o hambúrguer é clicado */
+                max-height: 500px; /* Expande o menu verticalmente quando ativo */
+            }
+
+            nav a {
+                display: block; /* Deixa os links em formato de bloco, um abaixo do outro */
+                padding: 15px;
+                text-align: center; /* Centraliza o texto dos links */
+            }
+            nav a:hover {
+                background-color: #01579b; /* Cor ao passar o mouse */
+            }
+            .hero {
+                height: 150px; /* Menor altura no mobile */
+            }
+
+            .hero h2 {
+                font-size: 28px; /* Fonte menor para o Hero */
+            }
+        }
+    to { opacity: 1; transform: translateY(0); }
+    }
+        .content {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #0277bd;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .content h2 {
+            font-size: 32px;
+            color: #0277bd;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .contact-info p a {
+            color: #0277bd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info p a:hover {
+            color: #ff4b2b;
+        }
+
+        /* Estilo do formulário */
+        .contact-form {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 90%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #190d57;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #ff4b2b;
+            outline: none;
+        }
+
+        .contact-form button {
+            background-color: #190d57;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff4b2b;
+            transform: translateY(-2px);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animação para o conteúdo */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+/* Estilo da galeria */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 20px); /* Três itens por linha com espaçamento */
+    max-width: calc(33.333% - 20px);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-item p {
+    padding: 10px;
+    background-color: #004080;
+    color: white;
+    font-size: 14px;
+}
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 20px); /* Dois itens por linha */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        flex: 1 1 100%; /* Um item por linha em telas pequenas */
+        max-width: 100%;
+    }
+}
+body2 {
+    font-family: Arial, sans-serif;
+    text-align: center;
+            background-color: #fff; /* Cor branca em vez de cinza */
+}
+
+.giro {
+    background-color: #e0f7fa;
+    padding: 15px;
+            background-color: #fff; /* Cor branca em vez de cinza */
+    margin: 10px 0;
+}
+
+.container {
+    padding: 20px;
+            background-color: #fff; /* Cor branca em vez de cinza */
+}
+
+.info-viagem,
+.pontos-turisticos,
+.informacoes-adicionais {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+            background-color: #fff; /* Cor branca em vez de cinza */
+    padding: 15px;
+}
+
+.imagem-viagem {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+            background-color: #fff; /* Cor branca em vez de cinza */
+}
+
+.whatsapp {
+    margin: 20px 0;
+}
+.carousel {
+    position: relative;
+    max-width: 600px; /* Ajuste conforme necessário */
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    border-radius: 15px; /* Bordas arredondadas */
+    width: 100%; /* Ajuste conforme necessário */
+    min-width: 100%;
+}
+/* CSS para dispositivos móveis */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Muda a direção dos itens para coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+    .image {
+        margin-bottom: 10px; /* Espaço entre a imagem e as informações */
+    }
+}
+

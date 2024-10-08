@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excursões - Bel Fagundes Excursões</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Incluindo o CSS -->
+</head>
+<body>
+<header>
+    <img src="https://imgur.com/WRL3tKR.jpg" alt="Logo Bel Fagundes Excursões" style="max-width: 200px;">
+    <div class="menu-toggle" id="mobile-menu">
+        &#9776;
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="excursões.html">Excursões</a>
+        <a href="empresa.html">Empresa</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/bel.fagundes.102" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com/bel.fagu" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+    </div>
+</header>
+
+<script>
+    const menu = document.getElementById('mobile-menu');
+    const nav = document.querySelector('nav');
+
+    menu.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
+
+<div class="content">
+    <h2>Excursões</h2>
+    <p>Confira nossas próximas excursões e garanta sua vaga!</p>
+     <div class="excursion">
+        <div class="excursion-card">
+            <img src="https://i.imgur.com/zip5AlV.jpg" alt="Gramado">
+            <h4>Paraty</h4>
+            <p>Descubra a beleza de Paraty, com suas ruas históricas e praias deslumbrantes.</p>
+            <a href="gramado.html" class="custom-button">Ver Detalhes</a>
+        </div>
+        <div class="excursion-card">
+            <img src="https://i.imgur.com/7AhuvqI.jpg" alt="October">
+            <h4>Gramado</h4>
+            <p>Descubra a beleza de Gramado, com suas montanhas e encantos europeus.</p>
+            <a href="october.html" class="custom-button">Ver Detalhes</a>
+        </div>
+        <div class="excursion-card">
+            <img src="https://i.imgur.com/8is3qPO.jpg" alt="Arraial do Cabo">
+            <h4>Serra Catarinense</h4>
+            <p>Uma aventura nas montanhas com vistas incríveis e natureza exuberante.</p>
+            <a href="arraial.html" class="custom-button">Ver Detalhes</a>
+        </div>
+    </div>
+</div>
+
+<a href="https://wa.me/554198082708" class="whatsapp-button" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<footer>
+    <div class="footer-content">
+        <h3>Bel Fagundes Excursões</h3>
+        <p>Explore novos destinos com conforto e segurança.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/bel.fagundes.102" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://instagram.com/bel.fagu" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 Bel Fagundes Excursões. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>

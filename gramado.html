@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gramado - Bel Fagundes Excursões</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Incluindo o CSS -->
+    <style>
+        /* Estilos para a estrutura geral */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        /* Estilos para o carrossel */
+        .carousel {
+            flex: 1;
+            position: top;
+            max-width: 500px;
+            overflow: hidden;
+    margin-top: 25px; /* Adicione esta linha */
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-images img {
+            border-radius: 15px; /* Bordas arredondadas */
+            width: 100%;
+            min-width: 100%;
+        }
+
+        /* Botões do carrossel */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Estilos para o quadro de informações */
+        .info-viagem, .pontos-turisticos, .informacoes-adicionais {
+            margin-bottom: 15px;
+        }
+
+        .info-viagem h3, .pontos-turisticos h3, .informacoes-adicionais h3 {
+            margin-bottom: 10px;
+            color: #0277bd;
+        }
+
+        .info-section {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff; /* Cor branca em vez de cinza */
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+<!-- Cabeçalho da página -->
+<header>
+    <img src="https://imgur.com/WRL3tKR.jpg" alt="Logo Bel Fagundes Excursões" style="max-width: 190px;">
+    <div class="menu-toggle" id="mobile-menu">
+        &#9776; <!-- Ícone de hambúrguer -->
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="excursões.html">Excursões</a>
+        <a href="empresa.html">Empresa</a>
+        <a href="contato.html">Contato</a>    
+    </nav>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/bel.fagundes.102" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com/bel.fagu" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+    </div>
+</header>
+
+<script>
+    const menu = document.getElementById('mobile-menu');
+    const nav = document.querySelector('nav');
+
+    menu.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
+
+<div style="text-align: center;margin-top: 50px;">
+    <p><span style="color: #0277bd; font-weight: bold;font-size: 2.5em;">Vem conhecer Gramado e Canela</span></p>
+</div>
+
+<div class="container">
+    <!-- Carrossel de imagens -->
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="https://imgur.com/vBgdgBV.jpg" alt="Imagem 1">
+            <img src="https://imgur.com/k4Yp6Nq.jpg" alt="Imagem 2">
+            <img src="https://imgur.com/EFSP8GW.jpg" alt="Imagem 3">
+        </div>
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+    </div>
+
+    <!-- Quadro de informações da viagem -->
+    <div class="info-section">
+        <section class="info-viagem">
+            <h3>Informações da Viagem</h3>
+            <p><strong>Data:</strong> 22 a 24/11</p>
+            <p><strong>Vagas limitadas, reserve já o seu lugar!</strong></p>
+            <p><strong>Preço:</strong> R$ 690,00 por pessoa</p>
+            <p><strong>Casal:</strong> promoção R$ 1.300</p>
+            <p><strong>Crianças:</strong> até 4 anos não paga, de 5 a 10 anos R$ 590,00</p>
+            <p><strong>Incluso:</strong> Transporte, 01 diária no hotel, guia, 1 almoço e lanche.</p>
+        </section>
+
+        <section class="pontos-turisticos">
+            <h3>Pontos Turísticos Incluídos</h3>
+            <ul>
+                <li>Lago Negro</li>
+                <li>Mini Mundo</li>
+                <li>Mundo a Vapor</li>
+                <li>Rua Torta</li>
+                <li>Bondinhos Aéreos</li>
+                <li>Igreja de Pedra</li>
+                <li>Loja de Chocolates</li>
+                <li>Adega com Degustação de Vinhos</li>
+            </ul>
+        </section>
+
+        <section class="informacoes-adicionais">
+            <h3>Informações Adicionais</h3>
+            <p><strong>Não incluso:</strong> ingressos dos atrativos e demais refeições.</p>
+            <p><strong>Reservas:</strong> mediante sinal de R$ 200.</p>
+            <p>Aceitamos pix, transferência e cartão. Parcelamos com juros e taxas.</p>
+        </section>
+    </div>
+</div>
+
+<!-- Botão flutuante do WhatsApp -->
+<a href="https://wa.me/554198082708" class="whatsapp-button" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+<!-- Botão "Reserve Agora" -->
+<div style="text-align: center; margin: 20px 0;">
+    <a href="https://wa.me/554198082708" class="reserve-button" target="_blank" style="text-decoration: none;">
+        <button style="padding: 15px 30px; background-color: #0277bd; color: white; border: none; border-radius: 5px; font-size: 20px; cursor: pointer;">
+            Reserve Agora
+        </button>
+    </a>
+</div>
+
+<div class="faq-section">
+    <div class="accordion-item">
+        <button class="accordion-button">Como faço para reservar uma excursão?</button>
+        <div class="accordion-content">
+            <p>Você pode fazer sua reserva diretamente pelo nosso site, na página da excursão desejada, ou entrar em contato conosco através de nossas redes socias e Whatsapp</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button">Quais formas de pagamento vocês aceitam?</button>
+        <div class="accordion-content">
+            <p>Aceitamos pagamentos via pix, transferência bancária ou parcelamos no cartão de crédito com acrécimo de juros.</p>
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <button class="accordion-button">Vocês fazem excursões para grupos privados?</button>
+        <div class="accordion-content">
+            <p>Sim, organizamos excursões personalizadas para grupos privados, eventos corporativos e ocasiões especiais. Entre em contato para mais informações.</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Adicione seu código JavaScript aqui -->
+    <script>
+        // Seleciona todos os botões do accordion
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+
+        // Itera sobre cada botão
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Seleciona o item do accordion (pergunta + resposta)
+                const accordionItem = button.parentElement;
+
+                // Alterna a classe 'active' para expandir/recolher
+                accordionItem.classList.toggle('active');
+
+                // Seleciona o conteúdo correspondente
+                const accordionContent = accordionItem.querySelector('.accordion-content');
+
+                // Se o item estiver ativo (expandido)
+                if (accordionItem.classList.contains('active')) {
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+                } else {
+                    accordionContent.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
+<!-- Rodapé com contatos e redes sociais -->
+<footer>
+    <div class="footer-content">
+        <h3>Bel Fagundes Excursões</h3>
+        <p>Explore novos destinos com conforto e segurança.</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/bel.fagundes.102" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://instagram.com/bel.fagu" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+            </a>
+        </div>
+    </div>
+
+    <div class="copyright">    
+        <p>&copy; 2024 Bel Fagundes Excursões. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script>
+let currentIndex = 0;
+
+function changeImage(direction) {
+    const images = document.querySelectorAll('.carousel-images img');
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    } else if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+
+    const offset = -currentIndex * 100; // Ajusta a posição da imagem
+    document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+}
+</script>
+
+</body>
+</html>
